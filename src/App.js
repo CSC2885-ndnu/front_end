@@ -9,6 +9,8 @@ import LoggIn from "./Pages/LoggIn.js";
 import Logout from "./Pages/Logout.js";
 import ViewPost from "./Pages/ViewPost.js";
 import EditPost from "./Pages/EditPost.js";
+import WelcomePage from "./Pages/WelcomePage";
+import MyAccount from "./Pages/MyAccount";
 
 class App extends Component {
   render() {
@@ -23,6 +25,8 @@ class App extends Component {
           <Route exact path="/Logout" component={Logout} />
           <Route exact path="/ViewPost" component={ViewPost} />
           <Route exact path="/EditPost" component={EditPost} />
+          <Route exact path="/WelcomePage" component={WelcomePage} />
+          <Route exact path="/MyAccount" component={MyAccount} />
         </div>
       </Router>
     );
