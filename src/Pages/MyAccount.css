@@ -1,0 +1,15 @@
+.TitlePage {
+  font-size: 60px;
+  font-family: "Times New Roman";
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.userPicture {
+  margin-bottom: 0.5rem;
+}
