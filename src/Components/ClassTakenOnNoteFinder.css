@@ -1,0 +1,16 @@
+.Classcard {
+  height: 50vh;
+  margin-top: 2rem;
+  width: 49%;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 5px #555;
+
+  background-color: #f5f5f5;
+}
+.Dtable {
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 3rem;
+  font-family: sans-serif;
+  text-align: center;
+}
