@@ -19,7 +19,7 @@ class WelcomePage extends Component {
       <div>
         
         <Navbar />
-        <div className="headerInWelcomePage">Here are your recent submissions:</div>
+        <div className="headerInWelcomePage">Your recent submissions:</div>
         {this.state.postData.map(post => {
           return (
             <Welcome_page
