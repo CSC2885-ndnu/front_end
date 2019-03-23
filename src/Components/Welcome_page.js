@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./View_Post.css";
 
 
@@ -11,11 +12,10 @@ class Welcome_page extends Component {
       
       <div className="container"> 
       
-        <h1 className="titleFont col-sm-4">{this.props.submission_course_name}</h1>
         
         <br />
         <div className="postContainer">
-          <h1 className="titleFont">{this.props.submission_title}</h1>
+          <Link to="#"><h1 className="titleFont">{this.props.submission_course_name} - {this.props.submission_title}</h1></Link>
             
           <p>{this.props.submission_notes}</p>
           <p className="text-muted">
