@@ -59,7 +59,7 @@ class ClassTakenOnNoteFinder extends Component {
                 );
               })}
             </table>
-            <Button color="primary float-right " size="sm">
+            <Button className="button2" color="primary float-right " size="sm">
               Show more classes
             </Button>
           </CardBody>
