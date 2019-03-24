@@ -34,7 +34,7 @@ class UserDetails extends Component {
             return <div className="Dsecurity">{userDetail.Security_Level}</div>;
           })}
 
-          <Button color="primary float-right " size="sm">
+          <Button className="button" color="primary float-right " size="sm">
             Edit
           </Button>
         </CardBody>
