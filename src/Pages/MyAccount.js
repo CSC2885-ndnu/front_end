@@ -3,11 +3,27 @@ import Navbar from "../Components/Navbar.js";
 import Footer from "../Components/Footer.js";
 import UserDetails from "../Components/UserDetails.js";
 import ClassTakenOnNoteFinder from "../Components/ClassTakenOnNoteFinder.js";
-import NotePosted from "../Components/NotePosted.js";
+import Welcome_page from "../Components/Welcome_page.js";
+
 import PersonalPicture from "../assets/PersonalPicture.jpg";
 import UserData from "../Data/User_Profile_Page.json";
 import "./MyAccount.css";
+
+
+
 class MyAccount extends Component {
+
+  state = {
+    postData: []
+  };
+  
+  componentDidMount() {
+    
+      fetch("https://api.myjson.com/bins/wg4aa")
+      .then(data => data.json())
+      .then(data => this.setState({ postData: data }));
+  }
+
   render() {
     return (
       <div>
@@ -24,7 +40,22 @@ class MyAccount extends Component {
           <hr />
           <ClassTakenOnNoteFinder />
           <UserDetails />
-          <NotePosted />
+          <div className="headerInWelcomePage">Your recent posts:</div>
+          {this.state.postData.map(post => {
+          return (
+            <Welcome_page
+              key={post.id}
+              submission_title={post.submission_title}
+              submission_course_name={post.submission_course_name}
+              submission_notes={post.submission_notes}
+              submission_time_class_meets={post.submission_time_class_meets}
+              submission_date={post.submission_date}
+              submission_link={post.submission_link}
+              submission_flag={post.submission_flag}
+            />
+          );
+        })}
+          
         </div>
 
         <Footer />
