@@ -4,7 +4,7 @@ import Footer from "../Components/Footer.js";
 import UserDetails from "../Components/UserDetails.js";
 import ClassTakenOnNoteFinder from "../Components/ClassTakenOnNoteFinder.js";
 import Welcome_page from "../Components/Welcome_page.js";
-
+import Button from 'react-bootstrap/Button'
 import PersonalPicture from "../assets/PersonalPicture.jpg";
 import UserData from "../Data/User_Profile_Page.json";
 import "./MyAccount.css";
@@ -40,6 +40,8 @@ class MyAccount extends Component {
           <hr />
           <ClassTakenOnNoteFinder />
           <UserDetails />
+          <Button href="/Post" size="lg">Post Notes</Button>
+
           <div className="headerInWelcomePage">Your recent posts:</div>
           {this.state.postData.map(post => {
           return (

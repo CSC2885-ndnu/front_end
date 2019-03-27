@@ -11,6 +11,7 @@ import ViewPost from "./Pages/ViewPost.js";
 import EditPost from "./Pages/EditPost.js";
 import WelcomePage from "./Pages/WelcomePage";
 import MyAccount from "./Pages/MyAccount";
+import Formx from "./Pages/Post";
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/EditPost" component={EditPost} />
           <Route exact path="/WelcomePage" component={WelcomePage} />
           <Route exact path="/MyAccount" component={MyAccount} />
+          <Route exact path="/Post" component={Formx} />
         </div>
       </Router>
     );
