@@ -12,6 +12,7 @@ import EditPost from "./Pages/EditPost.js";
 import WelcomePage from "./Pages/WelcomePage";
 import MyAccount from "./Pages/MyAccount";
 import Formx from "./Pages/Post";
+import TermsofUse from "./Pages/TermsofUse.js";
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
           <Route exact path="/WelcomePage" component={WelcomePage} />
           <Route exact path="/MyAccount" component={MyAccount} />
           <Route exact path="/Post" component={Formx} />
+          <Route exact path="/TermsofUse" component={TermsofUse} />
         </div>
       </Router>
     );
