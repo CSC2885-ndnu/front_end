@@ -9,21 +9,27 @@ class Footer extends Component {
         <footer className="footer float-right ">
           <Container>
             <Row className="justify-content-md-center">
-              <Col xs lg="2">
+              <Col xs lg="3">
                 <Link className="nav-link" to="/ContactUs">
                   Contact Us
                 </Link>
               </Col>
-              <Col xs lg="2">
+              <Col xs lg="3">
                 <Link className="nav-link" to="/Privacy">
-                  Privacy & Terms
+                  Privacy Policy
                 </Link>
               </Col>
-              <Col xs lg="2">
+              <Col xs lg="3">
                 <Link className="nav-link" to="/About">
                   About
                 </Link>
               </Col>
+              <Col xs lg="3">
+                <a className="nav-link" target="_blank" rel="noopener noreferrer" href="http://www.ndnu.edu/campus-life/files/2018/03/Housing-License-2018-2019.pdf">
+                  Terms of Use
+                </a>
+              </Col>
+
             </Row>
           </Container>
         </footer>

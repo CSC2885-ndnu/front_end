@@ -19,10 +19,15 @@ class AccountData extends Component {
             alt="Card image cap"
           />
           <CardBody>
-            <Button color="primary" size="lg">
+
+
+
+            {/* <Button color="primary" size="lg">
               {" "}
               Post it
-            </Button>
+            </Button> */}
+
+
           </CardBody>
         </div>
       </div>
