@@ -1,0 +1,29 @@
+.TitlePageAdmin {
+    font-size: 60px;
+    font-family: "Times New Roman";
+    text-align: center;
+    color: #21285c;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  
+  .userPicture {
+    margin-bottom: 0.5rem;
+  }
+
+  .center-col {
+    flex: 1;
+    background: #aaa;
+    overflow-y: scroll;
+  }
+
+  .DtableA {
+    flex: 1;
+    overflow: scroll;
+    max-height: 2px;
+  }
+  
