@@ -10,6 +10,7 @@ import Footer from "../Components/Footer.js";
 //import "./Home.css";
 
 class FormX extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {

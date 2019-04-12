@@ -13,6 +13,7 @@ import WelcomePage from "./Pages/WelcomePage";
 import MyAccount from "./Pages/MyAccount";
 import Formx from "./Pages/Post";
 import TermsofUse from "./Pages/TermsofUse.js";
+import classPage from './Pages/classPage';
 
 class App extends Component {
   render() {
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path="/MyAccount" component={MyAccount} />
           <Route exact path="/Post" component={Formx} />
           <Route exact path="/TermsofUse" component={TermsofUse} />
+          <Route exact path="/classPage" component={classPage} />
         </div>
       </Router>
     );
