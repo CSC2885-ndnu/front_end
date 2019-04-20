@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, CardBody } from "reactstrap";
-import UserData from "../Data/User_Profile_Page.json";
+
 import "./ClassTakenOnNoteFinder.css";
 
 const Div = {
@@ -11,6 +11,16 @@ const DivTable = {
 };
 
 class ClassTakenOnNoteFinder extends Component {
+  state = {
+    classData: []
+  };
+
+  componentDidMount() {
+    fetch("http://localhost:8080/seniorproject/getUserCourses/1")
+      .then(data => data.json())
+      .then(data => this.setState({ classData: data }));
+  }
+
   render() {
     return (
       <div>
@@ -31,37 +41,34 @@ class ClassTakenOnNoteFinder extends Component {
                 <th>Status</th>
               </tr>
 
-              {UserData.map(item => {
+              {this.state.classData.map(item => {
                 return (
                   <tbody>
                     <tr key={item.id}>
-                      <td>{item.enrolled_course_section}</td>
-                      <td>{item.enrolled_course_name}</td>
-                      <td>{item.Staus}</td>
+                      <td>{item.section}</td>
+                      <td>{item.courseName}</td>
+                      <td>{item.semester}</td>
                     </tr>
 
                     <tr key={item.id}>
-                      <td>{item.enrolled_course_section}</td>
-                      <td>{item.enrolled_course_name}</td>
-                      <td>{item.Staus}</td>
+                      <td>{item.section}</td>
+                      <td>{item.courseName}</td>
+                      <td>{item.semester}</td>
                     </tr>
                     <tr key={item.id}>
-                      <td>{item.enrolled_course_section}</td>
-                      <td>{item.enrolled_course_name}</td>
-                      <td>{item.Staus}</td>
+                      <td>{item.section}</td>
+                      <td>{item.courseName}</td>
+                      <td>{item.semester}</td>
                     </tr>
                     <tr key={item.id}>
-                      <td>{item.enrolled_course_section}</td>
-                      <td>{item.enrolled_course_name}</td>
-                      <td>{item.Staus}</td>
+                      <td>{item.section}</td>
+                      <td>{item.courseName}</td>
+                      <td>{item.semester}</td>
                     </tr>
                   </tbody>
                 );
               })}
             </table>
-            <Button className="button2" color="primary float-right " size="sm">
-              Show more classes
-            </Button>
           </CardBody>
         </div>
       </div>
