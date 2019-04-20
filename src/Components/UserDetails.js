@@ -1,10 +1,19 @@
 import React, { Component } from "react";
 import { CardBody, Button } from "reactstrap";
-import UserData from "../Data/User_Profile_Page.json";
 
 import "./UserDetails.css";
 
 class UserDetails extends Component {
+  state = {
+    UserData: []
+  };
+
+  componentDidMount() {
+    fetch("http://localhost:8080/seniorproject/userById/1")
+      .then(data => data.json())
+      .then(data => this.setState({ UserData: data }));
+  }
+
   render() {
     return (
       <div className="Usercard">
@@ -13,29 +22,25 @@ class UserDetails extends Component {
           <div className="Title">User Details</div>
           <hr />
           <div className="idnum float-left">ID Number :</div>
-          {UserData.map(userDetail => {
-            return <div className="idnumber">{userDetail.id}</div>;
-          })}
+          <div className="Uname">{this.state.UserData.user_id}</div>
 
-          <div className="Username float-left">Student Name :</div>
-          {UserData.map(userDetail => {
-            return <div className="Uname">{userDetail.user_name}</div>;
-          })}
-          <div className="email float-left">Email :</div>
-          {UserData.map(userDetail => {
-            return <div className="Demail">{userDetail.email}</div>;
-          })}
-          <div className="password float-left">Password :</div>
-          {UserData.map(userDetail => {
-            return <div className="Dpassword">{userDetail.Password}</div>;
-          })}
-          <div className="Security float-left">Security Level :</div>
-          {UserData.map(userDetail => {
-            return <div className="Dsecurity">{userDetail.Security_Level}</div>;
-          })}
+          <div className="idnum float-left">First Name :</div>
+          <div className="Uname">{this.state.UserData.firstName}</div>
 
-          <Button className="button" color="primary float-right " size="sm">
-            Edit
+          <div className="idnum float-left">Last Name :</div>
+          <div className="Uname">{this.state.UserData.lastName}</div>
+
+          <div className="idnum float-left">Student ID :</div>
+          <div className="Uname">{this.state.UserData.studentID}</div>
+
+          <div className="idnum float-left">Email :</div>
+          <div className="Uname">{this.state.UserData.email}</div>
+
+          <div className="idnum float-left">Password :</div>
+          <div className="Uname">{this.state.UserData.password}</div>
+
+          <Button href="/Post" size="lg">
+            Post Notes
           </Button>
         </CardBody>
       </div>
